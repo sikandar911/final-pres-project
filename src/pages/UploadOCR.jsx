@@ -97,10 +97,15 @@ display: block;
 
 .preview-image{
   margin-top: 10px;
-  max-width: 200px;
-  height: auto;
-  
+  width: 200px;
+  max-width: 120px;
+  height: auto; 
 }
+.preview-image img{
+  width: 180px;
+  height: auto;
+}
+
 .upload{
   color: white;
     margin-top: 10px;
