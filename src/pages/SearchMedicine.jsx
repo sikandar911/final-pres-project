@@ -136,11 +136,10 @@ export default function SearchMedicine({ detectedName, setDetectedName, uploadMe
 
 const Search = styled.div`
 
- display: flex;
- flex-direction: column;
+ display: block;
  padding: 20px;
  align-items: left;
- margin-left: -120px;
+
 
  .searchbox{
   width: 100%;

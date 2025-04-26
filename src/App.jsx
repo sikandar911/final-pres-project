@@ -15,8 +15,10 @@ function HomePage({ detectedName, setDetectedName, uploadMessage, setUploadMessa
   const navigate = useNavigate();
 
   return (
-    <APP>
-    <h1>Training  Phase</h1>
+   <Main>
+         <h1>Training  Phase</h1>
+
+   <APP>
       <Top>
         <UploadOCR
           detectedName={detectedName}
@@ -24,11 +26,7 @@ function HomePage({ detectedName, setDetectedName, uploadMessage, setUploadMessa
           uploadMessage={uploadMessage}
           setUploadMessage={setUploadMessage}
         />
-        <Button>
-          <button className="test" onClick={() => navigate("/test")}>
-            Test
-          </button>
-        </Button>
+       
       </Top>
 
       <SearchMedicine
@@ -37,9 +35,16 @@ function HomePage({ detectedName, setDetectedName, uploadMessage, setUploadMessa
         uploadMessage={uploadMessage}
         setUploadMessage={setUploadMessage}
       />
+       <Button>
+          <button className="test" onClick={() => navigate("/test")}>
+            Test
+          </button>
+        </Button>
     </APP>
+</Main>    
   );
 }
+
 
 function App() {
   const [detectedName, setDetectedName] = useState(null);
@@ -70,11 +75,13 @@ export default function WrappedApp() {
     </Router>
   );
 }
-
+const Main = styled.div`
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+`
 const APP = styled.div`
 display: flex;
-flex-direction: column;
-align-items: center;
 
 `
 
@@ -82,8 +89,8 @@ const Top = styled.div`
 display: flex;
 `
 const Button = styled.div`
-padding-top: 60px;
-margin-left: 50px;
+
+margin-left: 100px;
 .test{
   color: white;
     margin-top: 10px;

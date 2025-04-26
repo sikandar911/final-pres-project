@@ -91,13 +91,13 @@ export default function UploadOCR({ setDetectedName, detectedName, setUploadMess
 }
 const Upload = styled.div `
  padding: 20px;
- display: flex;
- align-items: left;
- flex-direction: column;
+display: block;
+
+
 
 .preview-image{
   margin-top: 10px;
-  width: auto;
+  max-width: 200px;
   height: auto;
   
 }
